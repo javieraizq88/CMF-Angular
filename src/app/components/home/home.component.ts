@@ -1,7 +1,6 @@
 
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CmfApiService } from 'src/app/services/cmf-api.service';
 
 @Component({
   selector: 'app-home',
@@ -10,19 +9,22 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class HomeComponent implements OnInit{
   @Input() titulo: string = "Indcadores"
-  
+  @Input() tituloCardDolar: string = "Dolar"
+  @Input() tituloCardEuro: string = "Euro"
+  @Input() tituloCardTMC: string = "Tasa de Interés Máxima Convencional (TMC)"
+  @Input() tituloCardUTM: string = "Unidad Tributaria Mensual (UTM)"
+  @Input() tituloCardUF: string = "Unidad de Fomento (UF)"
+  @Input() tituloCardIPC: string = "Indice de Precios al Consumidor (IPC)"
 
+  
+  @Input() textoDescripcion: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate quas repellendus voluptas accusantium magnam libero neque atque"
 
   constructor(
-    private apiService: CmfApiService,
     private router: Router
-
   ) { }
+
   ngOnInit(): void {
-
-
   }
-
 
   goToDolar() {
     this.router.navigate(['/dolar']);

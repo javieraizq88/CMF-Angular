@@ -2,18 +2,109 @@
 
     <h1>{{titulo}} </h1>
     
-    <button type="button" class="btn btn-primary" (click)="goToDolar()">Ir a Dolar $</button>
-    <button type="button" class="btn btn-primary" (click)="goToEuro()">Ir a Euro €</button>
-    <button type="button" class="btn btn-primary" (click)="goToTMC()">Ir a TMC</button>
-    <button type="button" class="btn btn-primary" (click)="goToUf()">Ir a UF</button>
-    <button type="button" class="btn btn-primary" (click)="goToIPC()">Ir a IPC</button>
-    <button type="button" class="btn btn-primary" (click)="goToUTM()">Ir a UTM</button>
-    
 
     
+    
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- dolar -->
+         <div class="col">
+            <div class="card mb-3 h-100">
+                <div class="card-header text-white bg-secondary">
+                    <h5 class="mt-2 text-center">{{tituloCardDolar}}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{textoDescripcion}}</p>
+                </div>
+                <div class="card-footer bg-transparent text-end">
+                    <button type="button" class="btn btn-primary" (click)="goToDolar()">Ir a Dolar</button>
+                </div>
+            </div>
+        </div>
+        <!-- euro -->
+        <div class="col">
+            <div class="card mb-3 h-100">
+                <div class="card-header text-white bg-success">
+                    <h5 class="mt-2 text-center">{{tituloCardEuro}}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{textoDescripcion}}</p>
+                </div>
+                <div class="card-footer bg-transparent text-end">
+                    <button type="button" class="btn btn-primary" (click)="goToEuro()">Ir a Euro</button>
+                </div>
+            </div>
+        </div>
+        <!-- TMC -->
+        <div class="col">
+            <div class="card mb-3 h-100">
+                <div class="card-header text-white bg-danger">
+                    <h5 class="mt-2">{{tituloCardTMC}}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{textoDescripcion}}</p>
+                </div>
+                <div class="card-footer bg-transparent text-end">
+                    <button type="button" class="btn btn-primary" (click)="goToTMC()">Ir a TMC</button>
+                </div>
+            </div>
+        </div>
+        <!-- UTM -->
+        <div class="col">
+            <div class="card mb-3 h-100">
+                <div class="card-header text-dark bg-warning">
+                    <h5 class="mt-2">{{tituloCardUTM}}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{textoDescripcion}}</p>
+                </div>
+                <div class="card-footer bg-transparent text-end">
+                    <button type="button" class="btn btn-primary" (click)="goToUTM()">Ir a UTM</button>
+                </div>
+            </div>
+        </div>
+        <!-- UF -->
+        <div class="col">
+            <div class="card mb-3 h-100">
+                <div class="card-header text-dark bg-info">
+                    <h5 class="mt-2">{{tituloCardUF}}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{textoDescripcion}}</p>
+                </div>
+                <div class="card-footer bg-transparent text-end">
+                    <button type="button" class="btn btn-primary" (click)="goToUf()">Ir a UF</button>
+                </div>
+            </div>
+        </div>
+        <!-- IPC -->
+        <div class="col">
+            <div class="card mb-3 h-100">
+                <div class="card-header text-dark bg-light">
+                    <h5 class="mt-2">{{tituloCardIPC}}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{textoDescripcion}}</p>
+                </div>
+                <div class="card-footer bg-transparent text-end">
+                    <button type="button" class="btn btn-primary" (click)="goToIPC()">Ir a IPC</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-dark mb-3 h-100">
+                <div class="card-body">
+                    <h5 class="mt-2">Danger card title</h5>
+                    <p class="card-text">{{textoDescripcion}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <ng-template #noData>
         <p>No se encontraron datos.</p>
     </ng-template>
-    
+
 </div>

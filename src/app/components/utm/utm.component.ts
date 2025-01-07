@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
@@ -9,12 +10,16 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class UtmComponent implements OnInit {
   utmData: any[] = [];
-  constructor(private apiService: CmfApiService, private router: Router) {}
+
+  constructor(
+    private apiService: CmfApiService, 
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     this.apiService.getUTM().subscribe({
       next: (data) => {
-        // console.log('Datos del Dólar:', data );
+         console.log('Datos del UTM:', data.UTMs );
         this.utmData = data.UTMs;
       },
       error: (err) => {
@@ -22,8 +27,9 @@ export class UtmComponent implements OnInit {
       }
     });
   }
-
   goToHome() {
     this.router.navigate(['/']);
   }
+
+
 }
