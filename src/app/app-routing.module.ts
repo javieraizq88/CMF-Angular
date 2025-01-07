@@ -5,6 +5,7 @@ import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component';
 import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
 import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf-mes/uf-mes.component';
+import { IpcComponent } from './components/ipc/ipc.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   { 
     path: 'uf', 
     component: UfMesComponent 
+  },
+  { 
+    path: 'ipc', 
+    component: IpcComponent 
   },
 ];
 

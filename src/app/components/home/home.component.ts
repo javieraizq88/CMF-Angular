@@ -11,7 +11,6 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 export class HomeComponent implements OnInit{
   @Input() titulo: string = "Indcadores"
   
-  ipcData: any[] = []; 
   utmData: any[] = []; 
 
   constructor(
@@ -21,15 +20,6 @@ export class HomeComponent implements OnInit{
   ) { }
   ngOnInit(): void {
 
-    this.apiService.getIPCMes().subscribe({
-      next: (data) => {
-        // console.log('Datos del IPC:', data);
-        this.ipcData = data.IPCs;
-      },
-      error: (err) => {
-        console.error('Error en la solicitud - IPC:', err);
-      }
-    });
 
     this.apiService.getUTMMes().subscribe({
       next: (data) => {
@@ -56,5 +46,9 @@ export class HomeComponent implements OnInit{
   }
   goToUf(){
     this.router.navigate(['/uf']);
+  }
+
+  goToIPC(){
+    this.router.navigate(['/ipc']);
   }
 }

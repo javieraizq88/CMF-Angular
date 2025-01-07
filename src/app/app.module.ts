@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component';
 import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
 import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
-import { UfMesComponent } from './components/uf-mes/uf-mes.component'; 
+import { UfMesComponent } from './components/uf-mes/uf-mes.component';
+import { IpcComponent } from './components/ipc/ipc.component'; 
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UfMesComponent } from './components/uf-mes/uf-mes.component';
     EuroMesComponent,
     TmcMesComponent,
     UfMesComponent,
+    IpcComponent,
 
   ],
   imports: [

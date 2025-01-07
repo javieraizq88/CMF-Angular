@@ -26,7 +26,7 @@ export class CmfApiService {
     const url = `${this.apiUrl}/euro/${this.periodo}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
-  getIPCMes(): Observable<any> {
+  getIPC(): Observable<any> {
     const url = `${this.apiUrl}/ipc/${this.year}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }

@@ -1,0 +1,29 @@
+    <div class="container">
+        <h2>Datos del IPC:</h2>
+        <button type="button" class="btn btn-primary" (click)="goToHome()">Volver</button>
+    
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ipc of ipcData"> 
+                        <td> {{ ipc.Fecha }}</td>
+                        <td> {{ ipc.Valor }}</td>
+                        <td>
+                            <a href="#" class="link-primary">Ver detalle</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>        
+        </div>
+        <ng-template #noData>
+            <p>No se encontraron datos.</p>
+        </ng-template>
+        
+    </div>
