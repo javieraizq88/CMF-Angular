@@ -43,10 +43,6 @@ export class CmfApiService {
     const url = `${this.apiUrl}/utm/${this.year}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
-  getTIP(): Observable<any> {
-    const url = `${this.apiUrl}/tip/${this.periodo}?apikey=${this.APIKey}&formato=json`;
-    return this.http.get<any>(url);  
-  }
 
   // Tasa TAB UF 360 días
   // La información de este índice ha sido suspendida y debe ser solicitada a Chilean Benchmark Facility SpA, administrador de las tasas de referencia TAB Nominal, TAB UF, TADO, e índices ICP e ICP Real, por encargo de la Asociación de Bancos (ABIF).

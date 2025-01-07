@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
@@ -11,7 +11,8 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 export class IpcComponent implements OnInit{
 
   ipcData: any[] = [];  
-
+  @Input() tituloCardIPC: string = "Indice de Precios al Consumidor (IPC)"
+  
   constructor(private apiService: CmfApiService, private router: Router) {}
   ngOnInit(): void {
     this.apiService.getIPC().subscribe({

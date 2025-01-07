@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
@@ -9,13 +9,14 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class EuroMesComponent implements OnInit {
   euroData: any[] = [];  // Array para almacenar todos los datos del euro
+  @Input() tituloCardEuro: string = "Euro"
 
   constructor(private apiService: CmfApiService, private router: Router) {}
 
   ngOnInit(): void {
     this.apiService.getEuroMes().subscribe({
       next: (data) => {
-        // console.log('Datos del Dólar:', data );
+        // console.log('Datos del euro:', data );
         this.euroData = data.Euros;
       },
       error: (err) => {

@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
@@ -10,7 +10,8 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class UtmComponent implements OnInit {
   utmData: any[] = [];
-
+  @Input() tituloCardUTM: string = "Unidad Tributaria Mensual (UTM)"
+  
   constructor(
     private apiService: CmfApiService, 
     private router: Router,

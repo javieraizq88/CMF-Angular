@@ -1,7 +1,11 @@
-<div class="container">
-    <h2>Datos de Tasa de Interés Máxima Convencional:</h2>
-    <button type="button" class="btn btn-primary" (click)="goToHome()">Volver</button>
-
+<div class="container mt-4">
+    <div class="d-flex">
+        <button type="button" class="btn btn-primary" (click)="goToHome()">
+            <i class="fa-solid fa-arrow-left mr-2"></i>
+            Volver
+        </button>
+        <h2 class="ms-4 mt-2">Datos del {{tituloCardTMC}} de los úlimos 30 días</h2>
+    </div>
     <div class="table-responsive">
         <table class="table">
             <thead>

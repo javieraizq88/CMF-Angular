@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
@@ -9,6 +9,8 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class TmcMesComponent implements OnInit{
   tmcData: any[] = []; 
+  @Input() tituloCardTMC: string = "Tasa de Interés Máxima Convencional"
+
   constructor(
     private apiService: CmfApiService,
     private router: Router
@@ -29,5 +31,5 @@ export class TmcMesComponent implements OnInit{
   goToHome() {
     this.router.navigate(['/']);
   }
-  
+
 }

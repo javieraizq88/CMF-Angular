@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
@@ -9,6 +9,8 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class UfMesComponent implements OnInit {
   ufData: any[] = [];  
+  @Input() tituloCardUF: string = "Unidad de Fomento (UF)"
+  
   constructor(private apiService: CmfApiService, private router: Router) {}
 
   ngOnInit(): void {
