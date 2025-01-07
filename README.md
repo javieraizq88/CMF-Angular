@@ -1,14 +1,27 @@
 # CmfChile
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.
+## librerias y versiones
 
-## Development server
+1) Angular CLI v16
+2) node v20.17.0
+3) npm v10.8.2
+4) Bootstrap v5.1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## para la API key
 
-## Code scaffolding
+1) solicitar API key en https://api.cmfchile.cl/index.html
+2) agregarla en el archivo enviroments/enviroment.ts en la variable APIKey
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## instalar dependencias
+
+`ng install`
+
+## levantar el proyecto
+
+ `ng serve`
+
+
+
 
 ## Build
 
