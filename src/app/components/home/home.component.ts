@@ -12,8 +12,6 @@ export class HomeComponent implements OnInit{
   @Input() titulo: string = "Indcadores"
   
   ipcData: any[] = []; 
-  tmcData: any[] = []; 
-  ufData: any[] = []; 
   utmData: any[] = []; 
 
   constructor(
@@ -33,15 +31,6 @@ export class HomeComponent implements OnInit{
       }
     });
 
-    this.apiService.getUFMes().subscribe({
-      next: (data) => {
-        // console.log('Datos del UF:', data);
-        this.ufData = data.UFs
-      },
-      error: (err) => {
-        console.error('Error en la solicitud:', err);
-      }
-    });
     this.apiService.getUTMMes().subscribe({
       next: (data) => {
         // console.log('Datos del UTM:', data);
@@ -65,5 +54,7 @@ export class HomeComponent implements OnInit{
   goToTMC(){
     this.router.navigate(['/tmc']);
   }
-
+  goToUf(){
+    this.router.navigate(['/uf']);
+  }
 }

@@ -11,6 +11,7 @@ export class CmfApiService {
   private apiUrl = environment.api; 
   private APIKey = environment.APIKey; 
   private periodo = "2024/01"
+  private year = "2024"
 
   constructor(private http: HttpClient) { }
   
@@ -26,7 +27,7 @@ export class CmfApiService {
     return this.http.get<any>(url);  
   }
   getIPCMes(): Observable<any> {
-    const url = `${this.apiUrl}/ipc/${this.periodo}?apikey=${this.APIKey}&formato=json`;
+    const url = `${this.apiUrl}/ipc/${this.year}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
   // Tasa de Interés Máxima Convencional
@@ -35,7 +36,7 @@ export class CmfApiService {
     return this.http.get<any>(url);  
   }
   getUFMes(): Observable<any> {
-    const url = `${this.apiUrl}/uf/${this.periodo}?apikey=${this.APIKey}&formato=json`;
+    const url = `${this.apiUrl}/uf/${this.year}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
   getUTMMes(): Observable<any> {
