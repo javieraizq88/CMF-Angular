@@ -1,8 +1,8 @@
 <div class="container">
 
-    <h1>{{titulo}} </h1>
+    <h1 class="mb-4">{{titulo}}</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-        <div class="col">
+        <div class="col mb-4">
             <div class="card">
                 <div class="card-header bg-primary"></div>
                 <div class="card-body">
@@ -24,11 +24,11 @@
                     <h5 class="card-title">{{tituloCardEuro}} </h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-secondary" (click)="goToEuro()">
-                                Revisar valores diarios
-                            </button>
-                        </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary" (click)="goToEuro()">
+                            Revisar valores diarios
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,11 +39,11 @@
                     <h5 class="card-title">{{tituloCardIPC}} </h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-success" (click)="goToIPC()">
-                                Revisar valores mensuales
-                            </button>
-                        </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-success" (click)="goToIPC()">
+                            Revisar valores mensuales
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,11 +54,11 @@
                     <h5 class="card-title">{{tituloCardTMC}} </h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content.</p>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-danger" (click)="goToTMC()">
-                                Revisar valores diarios
-                            </button>
-                        </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-danger" (click)="goToTMC()">
+                            Revisar valores diarios
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,11 +69,11 @@
                     <h5 class="card-title">{{tituloCardUF}} </h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-info" (click)="goToTMC()">
-                                Revisar valores diarios
-                            </button>
-                        </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-info" (click)="goToTMC()">
+                            Revisar valores diarios
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,50 +84,12 @@
                     <h5 class="card-title">{{tituloCardUTM}} </h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-warning" (click)="goToUTM()">
-                                Revisar valores diarios
-                            </button>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-header bg-light"></div>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-header bg-dark"></div>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-warning" (click)="goToUTM()">
+                            Revisar valores diarios
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-    <div class="d-grid gap-2 d-md-block">
-
-        <button type="button" class="btn btn-secondary" (click)="goToEuro()">Revisar Valores del Euro</button>
-        <button type="button" class="btn btn-success" (click)="goToTMC()">Success</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-light">Light</button>
-        <button type="button" class="btn btn-dark">Dark</button>
-
-        <button type="button" class="btn btn-link">Link</button>
-    </div>
-
-</div>
