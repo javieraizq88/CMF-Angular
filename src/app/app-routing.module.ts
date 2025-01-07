@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component';
 import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
+import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   { 
     path: 'euro', 
     component: EuroMesComponent 
+  },
+  { 
+    path: 'tmc', 
+    component: TmcMesComponent 
   },
 ];
 

@@ -11,7 +11,6 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 export class HomeComponent implements OnInit{
   @Input() titulo: string = "Indcadores"
   
-  euroData: any[] = []; 
   ipcData: any[] = []; 
   tmcData: any[] = []; 
   ufData: any[] = []; 
@@ -24,17 +23,6 @@ export class HomeComponent implements OnInit{
   ) { }
   ngOnInit(): void {
 
-
-    this.apiService.getEuroMes().subscribe({
-      next: (data) => {
-        // console.log('Datos del Euro:', data);
-        this.euroData = data.Euros;
-      },
-      error: (err) => {
-        console.error('Error en la solicitud - Euro:', err);
-      }
-    });
-
     this.apiService.getIPCMes().subscribe({
       next: (data) => {
         // console.log('Datos del IPC:', data);
@@ -42,16 +30,6 @@ export class HomeComponent implements OnInit{
       },
       error: (err) => {
         console.error('Error en la solicitud - IPC:', err);
-      }
-    });
-
-    this.apiService.getTMCMes().subscribe({
-      next: (data) => {
-        // console.log('Datos del TMC:', data);
-        this.tmcData = data.TMCs;
-      },
-      error: (err) => {
-        console.error('Error en la solicitud - TMC:', err);
       }
     });
 
@@ -83,4 +61,9 @@ export class HomeComponent implements OnInit{
   goToEuro(){
     this.router.navigate(['/euro']);
   }
+
+  goToTMC(){
+    this.router.navigate(['/tmc']);
+  }
+
 }
