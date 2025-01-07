@@ -3,23 +3,23 @@ import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
 @Component({
-  selector: 'app-dolar-mes',
-  templateUrl: './dolar-mes.component.html',
-  styleUrls: ['./dolar-mes.component.css']
+  selector: 'app-euro-mes',
+  templateUrl: './euro-mes.component.html',
+  styleUrls: ['./euro-mes.component.css']
 })
-export class DolarMesComponent implements OnInit {
-  dolarData: any[] = [];  // Array para almacenar todos los datos del dolar
+export class EuroMesComponent implements OnInit {
+  euroData: any[] = [];  // Array para almacenar todos los datos del euro
 
   constructor(private apiService: CmfApiService, private router: Router) {}
-  
+
   ngOnInit(): void {
-    this.apiService.getDolarMes().subscribe({
+    this.apiService.getEuroMes().subscribe({
       next: (data) => {
         // console.log('Datos del Dólar:', data );
-        this.dolarData = data.Dolares;
+        this.euroData = data.Euros;
       },
       error: (err) => {
-        console.error('Error en la solicitud - Dolar:', err);
+        console.error('Error en la solicitud - DolEuroar:', err);
       }
     });
   }

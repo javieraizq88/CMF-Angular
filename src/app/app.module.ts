@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component'; 
+import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component';
+import { EuroMesComponent } from './components/euro-mes/euro-mes.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DolarMesComponent,
+    EuroMesComponent,
 
   ],
   imports: [

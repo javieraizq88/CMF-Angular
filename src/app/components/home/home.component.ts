@@ -79,4 +79,8 @@ export class HomeComponent implements OnInit{
   goToDolar() {
     this.router.navigate(['/dolar']);
   }
+
+  goToEuro(){
+    this.router.navigate(['/euro']);
+  }
 }

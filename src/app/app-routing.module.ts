@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component';
+import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,10 @@ const routes: Routes = [
     path: 'dolar', 
     component: DolarMesComponent 
   },
-
+  { 
+    path: 'euro', 
+    component: EuroMesComponent 
+  },
 ];
 
 @NgModule({

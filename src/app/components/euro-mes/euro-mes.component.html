@@ -1,6 +1,6 @@
 <div class="container">
-    <h2>Datos del Dólar:</h2>
-    <button type="button" class="btn btn-primary" (click)="goToHome()">Volver</button>
+    <h2>Datos del Euro €:</h2>
+    <button (click)="goToHome()" type="button" class="btn btn-primary">Volver</button>
 
     <div class="table-responsive">
         <table class="table">
@@ -12,9 +12,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let dolar of dolarData"> 
-                    <td> {{ dolar.Fecha }}</td>
-                    <td>$ {{ dolar.Valor }}</td>
+                <tr *ngFor="let euro of euroData"> 
+                    <td> {{ euro.Fecha }}</td>
+                    <td>$ {{ euro.Valor }}</td>
                     <td>
                         <a href="#" class="link-primary">Ver detalle</a>
                     </td>
