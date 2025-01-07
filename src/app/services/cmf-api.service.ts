@@ -39,8 +39,8 @@ export class CmfApiService {
     const url = `${this.apiUrl}/uf/${this.year}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
-  getUTMMes(): Observable<any> {
-    const url = `${this.apiUrl}/utm/${this.periodo}?apikey=${this.APIKey}&formato=json`;
+  getUTM(): Observable<any> {
+    const url = `${this.apiUrl}/utm/${this.year}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
 

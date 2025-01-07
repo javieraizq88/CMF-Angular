@@ -11,7 +11,7 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 export class HomeComponent implements OnInit{
   @Input() titulo: string = "Indcadores"
   
-  utmData: any[] = []; 
+
 
   constructor(
     private apiService: CmfApiService,
@@ -21,34 +21,26 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
 
 
-    this.apiService.getUTMMes().subscribe({
-      next: (data) => {
-        // console.log('Datos del UTM:', data);
-        this.utmData = data.UTMs
-      },
-      error: (err) => {
-        console.error('Error en la solicitud:', err);
-      }
-    });
   }
 
 
   goToDolar() {
     this.router.navigate(['/dolar']);
   }
-
   goToEuro(){
     this.router.navigate(['/euro']);
   }
-
   goToTMC(){
     this.router.navigate(['/tmc']);
   }
   goToUf(){
     this.router.navigate(['/uf']);
   }
-
   goToIPC(){
     this.router.navigate(['/ipc']);
   }
+  goToUTM(){
+    this.router.navigate(['/utm']);
+  }
+
 }

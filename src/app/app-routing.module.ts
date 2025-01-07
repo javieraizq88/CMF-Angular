@@ -6,6 +6,7 @@ import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
 import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf-mes/uf-mes.component';
 import { IpcComponent } from './components/ipc/ipc.component';
+import { UtmComponent } from './components/utm/utm.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   { 
     path: 'ipc', 
     component: IpcComponent 
+  },
+  { 
+    path: 'utm', 
+    component: UtmComponent 
   },
 ];
 

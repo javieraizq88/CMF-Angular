@@ -7,19 +7,11 @@
     <button type="button" class="btn btn-primary" (click)="goToTMC()">Ir a TMC</button>
     <button type="button" class="btn btn-primary" (click)="goToUf()">Ir a UF</button>
     <button type="button" class="btn btn-primary" (click)="goToIPC()">Ir a IPC</button>
+    <button type="button" class="btn btn-primary" (click)="goToUTM()">Ir a UTM</button>
     
 
     
-   
-    <div *ngIf="utmData.length > 0; else noData">
-        <h2>Datos de UTM:</h2>
-        <ul>
-            <li *ngFor="let utm of utmData">
-                Fecha: {{ utm.Fecha }} - Valor: {{ utm.Valor }}
-            </li>
-        </ul>
-    </div>
-    
+
     <ng-template #noData>
         <p>No se encontraron datos.</p>
     </ng-template>

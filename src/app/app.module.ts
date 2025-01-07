@@ -10,7 +10,8 @@ import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component';
 import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
 import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf-mes/uf-mes.component';
-import { IpcComponent } from './components/ipc/ipc.component'; 
+import { IpcComponent } from './components/ipc/ipc.component';
+import { UtmComponent } from './components/utm/utm.component'; 
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { IpcComponent } from './components/ipc/ipc.component';
     TmcMesComponent,
     UfMesComponent,
     IpcComponent,
+    UtmComponent,
 
   ],
   imports: [
