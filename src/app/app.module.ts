@@ -22,6 +22,8 @@ import { DolarMesComponent } from './components/dolar/dolar-mes/dolar-mes.compon
 import { DolarHoyComponent } from './components/dolar/dolar-hoy/dolar-hoy.component';
 import { EuroMesComponent } from './components/euro/euro-mes/euro-mes.component';
 import { EuroHoyComponent } from './components/euro/euro-hoy/euro-hoy.component';
+import { IpcAnualComponent } from './components/ipc/ipc-anual/ipc-anual.component';
+import { IpcHoyComponent } from './components/ipc/ipc-hoy/ipc-hoy.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { EuroHoyComponent } from './components/euro/euro-hoy/euro-hoy.component'
          DolarHoyComponent,
          EuroHoyComponent,
          EuroMesComponent,
+         IpcAnualComponent,
+         IpcHoyComponent,
 
   ],
   imports: [

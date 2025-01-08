@@ -9,15 +9,16 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
   @Input() titulo: string = "Indcadores"
-  @Input() tituloCardDolar: string = "Dolar"
-  @Input() tituloCardEuro: string = "Euro"
+  @Input() tituloCardDolar: string = "Dolar (USD o $)" 
+  @Input() tituloCardEuro: string = "Euro (EUR o €)"
   @Input() tituloCardTMC: string = "Tasa de Interés Máxima Convencional (TMC)"
   @Input() tituloCardUTM: string = "Unidad Tributaria Mensual (UTM)"
   @Input() tituloCardUF: string = "Unidad de Fomento (UF)"
   @Input() tituloCardIPC: string = "Indice de Precios al Consumidor (IPC)"
-
+  @Input() textoBotonMes: string = "últimos 30 días"
+  @Input() textoBotonYear: string = "año actual"
   
-  @Input() textoDescripcion: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate quas repellendus voluptas accusantium magnam libero neque atque"
+  @Input() textoDescripcion: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate quas repellendus voluptas"
 
   constructor(
     private router: Router
@@ -49,6 +50,9 @@ export class HomeComponent implements OnInit{
   }
   goToIPC(){
     this.router.navigate(['/ipc']);
+  }
+  goToIPCHoy(){
+    this.router.navigate(['/ipc-hoy']);
   }
   goToUTM(){
     this.router.navigate(['/utm']);
