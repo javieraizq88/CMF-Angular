@@ -11,18 +11,27 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 export class DolarMesComponent implements OnInit {
   @Input() tituloCardDolar: string = "Dolar"
   dolarData: any[] = [];  // Array para almacenar todos los datos del dolar
-  
-  constructor (private apiService: CmfApiService, private router: Router) {}
-  
-  ngOnInit(): void {
+  sortedData: any[] = [];
+  sortAsc: boolean = true;
+    // Definir las columnas para la tabla
+    displayedColumns: string[] = ['fecha', 'valor', 'detalle'];
     
-    this.apiService.getDolarMes().subscribe({
-      next: (data) => {
-        console.log('Datos del Dólar:', data );
-        this.dolarData = data.Dolares;
-      },
-      error: (err) => {
-        console.error('Error en la solicitud - Dolar:', err);
+  constructor(private apiService: CmfApiService, private router: Router) {}
+  ngOnInit(): void {
+    this.apiService.getDolarMes().subscribe((data: any) => {
+      console.log(data.Dolares)
+      this.dolarData = data.Dolares;
+      this.sortedData = [...this.dolarData];
+    });
+  }
+
+  sortByValue(): void {
+    this.sortAsc = !this.sortAsc;
+    this.sortedData.sort((a: any, b: any) => {
+      if (this.sortAsc) {
+        return a.valor - b.valor;
+      } else {
+        return b.valor - a.valor;
       }
     });
   }

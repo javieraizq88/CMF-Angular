@@ -13,6 +13,12 @@ import { UfMesComponent } from './components/uf-mes/uf-mes.component';
 import { IpcComponent } from './components/ipc/ipc.component';
 import { UtmComponent } from './components/utm/utm.component'; 
 import { HomeComponent } from './components/home/pages/home.component';
+import { OrderPipe } from './pipes/order.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { TablaComponent } from './components/tabla/tabla.component';
+import { CmfApiService } from './services/cmf-api.service';
 
 @NgModule({
   declarations: [
@@ -24,14 +30,21 @@ import { HomeComponent } from './components/home/pages/home.component';
     UfMesComponent,
     IpcComponent,
     UtmComponent,
+    TablaComponent,
+    
+    OrderPipe,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatButtonModule,
+    
   ],
-  providers: [],
+  providers: [CmfApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

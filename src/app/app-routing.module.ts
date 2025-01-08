@@ -8,6 +8,7 @@ import { UfMesComponent } from './components/uf-mes/uf-mes.component';
 import { IpcComponent } from './components/ipc/ipc.component';
 import { UtmComponent } from './components/utm/utm.component';
 import { HomeComponent } from './components/home/pages/home.component';
+import { TablaComponent } from './components/tabla/tabla.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'uf', component: UfMesComponent },
   { path: 'ipc', component: IpcComponent },
   { path: 'utm', component: UtmComponent },
+  { path: 'tabla', component: TablaComponent },
   // TODO cuando no existe la ruta
   { path: '**', redirectTo: '/' }
 ];

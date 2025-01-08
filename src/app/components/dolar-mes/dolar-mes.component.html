@@ -7,26 +7,32 @@
         <h2 class="ms-4 mt-2">Datos del {{tituloCardDolar}} de los úlimos 30 días</h2>
     </div>
 
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Detalle</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let dolar of dolarData"> 
-                    <td> {{ dolar.Fecha }}</td>
-                    <td>$ {{ dolar.Valor }}</td>
-                    <td>
-                        <a href="#" class="link-primary">Ver detalle</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>        
-    </div>
+    <table mat-table [dataSource]="sortedData">
+        <!-- Columna Fecha -->
+        <ng-container matColumnDef="fecha">
+          <th mat-header-cell *matHeaderCellDef>Fecha</th>
+          <td mat-cell *matCellDef="let element">{{ element.Fecha }}</td>
+        </ng-container>
+    
+        <!-- Columna Valor -->
+        <ng-container matColumnDef="valor">
+          <th mat-header-cell *matHeaderCellDef (click)="sortByValue()">Valor</th>
+          <td mat-cell *matCellDef="let element">{{ element.Valor }}</td>
+        </ng-container>
+    
+        <!-- Columna Detalle -->
+        <ng-container matColumnDef="detalle">
+          <th mat-header-cell *matHeaderCellDef>Detalle</th>
+          <td mat-cell *matCellDef="let element">
+              <a href="">Ver detalle</a></td>
+        </ng-container>
+    
+        <!-- Fila de encabezados -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    
+        <!-- Fila de datos -->
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
     <ng-template #noData>
         <p>No se encontraron datos.</p>
     </ng-template>

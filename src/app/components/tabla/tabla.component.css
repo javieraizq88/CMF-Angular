@@ -1,0 +1,12 @@
+.container {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th {
+    cursor: pointer;
+  }
+  

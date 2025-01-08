@@ -16,7 +16,7 @@ export class CmfApiService {
   constructor(private http: HttpClient) { }
   
 // ul de ejemplo
-// https://api.cmfchile.cl/api-sbifv3/recursos_api/dolar2010/01?apikey=SBIF9990SBIF44b7SBIF7f4c5a537d02358e1099&formato=json
+// https://api.cmfchile.cl/api-sbifv3/recursos_api/dolar/2010/01?apikey=SBIF9990SBIF44b7SBIF7f4c5a537d02358e1099&formato=json
 
   getDolarMes(): Observable<any> {
     const url = `${this.apiUrl}/dolar/${this.periodo}/?apikey=${this.APIKey}&formato=json`;
