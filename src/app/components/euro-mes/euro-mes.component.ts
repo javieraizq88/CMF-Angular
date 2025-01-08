@@ -8,24 +8,34 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
   styleUrls: ['./euro-mes.component.css']
 })
 export class EuroMesComponent implements OnInit {
-  euroData: any[] = [];  // Array para almacenar todos los datos del euro
   @Input() tituloCardEuro: string = "Euro"
+  euroData: any[] = [];  // Array para almacenar todos los datos del euro
+  displayedColumns: string[] = ['fecha', 'valor', 'detalle'];   // columnas para la tabla
+  sortedData: any[] = [];
+  sortAsc: boolean = true;
 
   constructor(private apiService: CmfApiService, private router: Router) {}
 
   ngOnInit(): void {
-    this.apiService.getEuroMes().subscribe({
-      next: (data) => {
+    this.apiService.getEuroMes().subscribe((data: any) => {
         // console.log('Datos del euro:', data );
         this.euroData = data.Euros;
-      },
-      error: (err) => {
-        console.error('Error en la solicitud - DolEuroar:', err);
-      }
+        this.sortedData = [...this.euroData];
     });
   }
 
   goToHome() {
     this.router.navigate(['/']);
+  }
+
+  sortByValue(): void {
+    this.sortAsc = !this.sortAsc;
+    this.sortedData.sort((a: any, b: any) => {
+      if (this.sortAsc) {
+        return a.valor - b.valor;
+      } else {
+        return b.valor - a.valor;
+      }
+    });
   }
 }
