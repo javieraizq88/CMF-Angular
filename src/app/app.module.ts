@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { DolarMesComponent } from './components/dolar-mes/dolar-mes.component';
+
 import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
 import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf-mes/uf-mes.component';
@@ -19,12 +19,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { CmfApiService } from './services/cmf-api.service';
+import { DolarMesComponent } from './components/dolar/dolar-mes/dolar-mes.component';
+import { DolarHoyComponent } from './components/dolar/dolar-hoy/dolar-hoy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DolarMesComponent,
+
     EuroMesComponent,
     TmcMesComponent,
     UfMesComponent,
@@ -33,6 +35,8 @@ import { CmfApiService } from './services/cmf-api.service';
     TablaComponent,
     
     OrderPipe,
+         DolarMesComponent,
+         DolarHoyComponent,
 
   ],
   imports: [

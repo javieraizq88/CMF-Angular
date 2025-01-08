@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
 @Component({
@@ -9,20 +8,27 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
   styleUrls: ['./dolar-mes.component.css']
 })
 export class DolarMesComponent implements OnInit {
-  @Input() tituloCardDolar: string = "Dolar"
-  dolarData: any[] = [];  // Array para almacenar todos los datos del dolar
-  displayedColumns: string[] = ['fecha', 'valor', 'detalle'];   // columnas para la tabla
+  @Input() tituloCard: string = "Dolar"
+  dolarData: any[] = [];  // Array para almacenar todos los datos del euro
+  displayedColumns: string[] = ['fecha', 'valor'];   // columnas para la tabla
   sortedData: any[] = [];
   sortAsc: boolean = true;
-    
-  constructor(private apiService: CmfApiService, private router: Router) {}
+
+  constructor (
+    private apiService: CmfApiService, 
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.apiService.getDolarMes().subscribe((data: any) => {
-     // console.log(data.Dolares)
-      this.dolarData = data.Dolares;
-      this.sortedData = [...this.dolarData];
+    this.apiService.getEuroMes().subscribe((data: any) => {
+        // console.log('Datos del euro:', data );
+        this.dolarData = data.Euros;
+        this.sortedData = [...this.dolarData];
     });
+  }
+
+  goToHome() {
+    this.router.navigate(['/']);
   }
 
   sortByValue(): void {
@@ -36,7 +42,4 @@ export class DolarMesComponent implements OnInit {
     });
   }
 
-  goToHome() {
-    this.router.navigate(['/']);
-  }
 }

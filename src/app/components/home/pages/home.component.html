@@ -9,9 +9,12 @@
                     <h2 class="card-title">{{tituloCardDolar}} </h2>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary" (click)="goToDolar()">
-                            Revisar valores diarios
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-primary" (click)="goToDolarHoy()">
+                            valor actual
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" (click)="goToDolar()">
+                            valor mensual
                         </button>
                     </div>
                 </div> <!-- fin card-body -->

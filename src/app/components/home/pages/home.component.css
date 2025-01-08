@@ -1,0 +1,14 @@
+
+/* boones */
+button{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.btn-outline-primary{
+    background-color: blueviolet;
+    color: white;
+}
+.btn-outline-secondary{
+    color: white;
+    background-color:rgb(255, 28, 244)
+}
