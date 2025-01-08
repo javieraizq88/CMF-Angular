@@ -3,16 +3,14 @@
     <h1 class="my-4">{{titulo}} mensuales</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-around">
         <!-- dolar -->
-        <div class="col mb-4">
+        <div class="col mb-2">
             <div class="card">
                 <div class="card-header bg-primary"></div>
                 <div class="card-body">
                     <h2 class="card-title">{{tituloCardDolar}} </h2>
-                    <p class="card-text">
-                        {{textoDescripcion}}
-                    </p>
+                    <p class="card-text">{{textoDescripcion}}</p>
                     <div class="d-grid d-md-flex justify-content-around mt-md-4 mb-md-2">
-                        <button type="button" class="btn btn-outline-primary " (click)="goToDolarHoy()">
+                        <button type="button" class="btn btn-outline-primary" (click)="goToDolarHoy()">
                             valor actual
                         </button>
                         <button type="button" class="btn btn-outline-secondary mt-3 mb-1 my-md-0" (click)="goToDolar()">
@@ -23,14 +21,12 @@
             </div> <!-- fin card -->
         </div> <!-- fin col -->
         <!-- euro -->
-        <div class="col mb-4">
+        <div class="col mb-2">
             <div class="card">
                 <div class="card-header bg-secondary"></div>
                 <div class="card-body">
                     <h2 class="card-title">{{tituloCardEuro}} </h2>
-                    <p class="card-text">
-                        {{textoDescripcion}}
-                    </p>
+                    <p class="card-text">{{textoDescripcion}}</p>
                     <div class="d-flex justify-content-around mt-md-4 mb-md-2">
                         <button type="button" class="btn btn-outline-primary" (click)="goToEuroHoy()">
                             valor actual
@@ -43,14 +39,12 @@
             </div>
         </div>
         <!-- TMC -->
-        <div class="col mb-4">
+        <div class="col mb-2">
             <div class="card">
                 <div class="card-header bg-danger"></div>
                 <div class="card-body">
                     <h2 class="card-title">{{tituloCardTMC}} </h2>
-                    <p class="card-text">
-                        {{textoDescripcion}}
-                    </p>
+                    <p class="card-text">{{textoDescripcion}}</p>
                     <div class="d-flex justify-content-around mt-md-4 mb-md-2">
                         <button type="button" class="btn btn-outline-primary" (click)="goToTMCHoy()">
                             valor actual
@@ -62,22 +56,24 @@
                 </div>
             </div>
         </div>
+        <!-- UF -->
         <div class="col mb-4">
             <div class="card">
                 <div class="card-header bg-info"></div>
                 <div class="card-body">
                     <h2 class="card-title">{{tituloCardUF}} </h2>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">{{textoDescripcion}}</p>
                     <div class="d-flex justify-content-around mt-md-4 mb-md-2">
-                        <button type="button" class="btn btn-info" (click)="goToTMC()">
-                            Revisar valores diarios
+                        <button type="button" class="btn btn-outline-primary" (click)="goToUfHoy()">
+                            valor actual
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary mt-3 mb-1 my-md-0" (click)="goToUf()">
+                            {{textoBotonMes}}
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <h1 class="mb-4">{{titulo}} anuales</h1>

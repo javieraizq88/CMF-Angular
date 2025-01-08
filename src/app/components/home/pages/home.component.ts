@@ -27,27 +27,14 @@ export class HomeComponent implements OnInit{
   ngOnInit(): void {
   }
 
-  goToDolar() {
-    this.router.navigate(['/dolar']);
-  }
-  goToDolarHoy() {
-    this.router.navigate(['/dolar-hoy']);
-  }
-  goToEuro(){
-    this.router.navigate(['/euro']);
-  }
-  goToEuroHoy(){
-    this.router.navigate(['/euro-hoy']);
-  }
-  goToTMC(){
-    this.router.navigate(['/tmc']);
-  }
-  goToTMCHoy(){
-    this.router.navigate(['/tmc-hoy']);
-  }
-  goToUf(){
-    this.router.navigate(['/uf']);
-  }
+  goToDolar() {this.router.navigate(['/dolar'])}
+  goToDolarHoy() {this.router.navigate(['/dolar-hoy'])}
+  goToEuro() {this.router.navigate(['/euro'])}
+  goToEuroHoy() {this.router.navigate(['/euro-hoy'])}
+  goToTMC(){this.router.navigate(['/tmc'])}
+  goToTMCHoy(){this.router.navigate(['/tmc-hoy'])}
+  goToUf() {this.router.navigate(['/uf'])}
+  goToUfHoy() {this.router.navigate(['/uf-hoy'])}
   goToIPC(){
     this.router.navigate(['/ipc']);
   }
