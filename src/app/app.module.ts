@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
+import { TmcMesComponent } from './components/tmc/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf-mes/uf-mes.component';
 import { IpcComponent } from './components/ipc/ipc.component';
 import { UtmComponent } from './components/utm/utm.component'; 
@@ -24,24 +24,27 @@ import { EuroMesComponent } from './components/euro/euro-mes/euro-mes.component'
 import { EuroHoyComponent } from './components/euro/euro-hoy/euro-hoy.component';
 import { IpcAnualComponent } from './components/ipc/ipc-anual/ipc-anual.component';
 import { IpcHoyComponent } from './components/ipc/ipc-hoy/ipc-hoy.component';
+import { TmcHoyComponent } from './components/tmc/tmc-hoy/tmc-hoy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TmcMesComponent,
     UfMesComponent,
     IpcComponent,
     UtmComponent,
     TablaComponent,
     
     OrderPipe,
-         DolarMesComponent,
-         DolarHoyComponent,
-         EuroHoyComponent,
-         EuroMesComponent,
-         IpcAnualComponent,
-         IpcHoyComponent,
+    DolarMesComponent,
+    DolarHoyComponent,
+    EuroHoyComponent,
+    EuroMesComponent,
+    IpcAnualComponent,
+    IpcHoyComponent,
+    TmcHoyComponent,
+    TmcMesComponent,
+    TmcHoyComponent
 
   ],
   imports: [

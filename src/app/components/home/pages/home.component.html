@@ -2,7 +2,7 @@
 
     <h1 class="my-4">{{titulo}} mensuales</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-around">
-      <!-- dolar -->
+        <!-- dolar -->
         <div class="col mb-4">
             <div class="card">
                 <div class="card-header bg-primary"></div>
@@ -36,13 +36,14 @@
                             valor actual
                         </button>
                         <button type="button" class="btn btn-outline-secondary mt-3 mb-1 my-md-0" (click)="goToEuro()">
-                          {{textoBotonMes}}
+                            {{textoBotonMes}}
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-              <div class="col mb-4">
+        <!-- TMC -->
+        <div class="col mb-4">
             <div class="card">
                 <div class="card-header bg-danger"></div>
                 <div class="card-body">
@@ -50,9 +51,12 @@
                     <p class="card-text">
                         {{textoDescripcion}}
                     </p>
-                        <div class="d-flex justify-content-around mt-md-4 mb-md-2">
-                        <button type="button" class="btn btn-danger" (click)="goToTMC()">
-                            Revisar valores diarios
+                    <div class="d-flex justify-content-around mt-md-4 mb-md-2">
+                        <button type="button" class="btn btn-outline-primary" (click)="goToTMCHoy()">
+                            valor actual
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary mt-3 mb-1 my-md-0" (click)="goToTMC()">
+                            {{textoBotonMes}}
                         </button>
                     </div>
                 </div>
@@ -65,7 +69,7 @@
                     <h2 class="card-title">{{tituloCardUF}} </h2>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-around mt-md-4 mb-md-2">
+                    <div class="d-flex justify-content-around mt-md-4 mb-md-2">
                         <button type="button" class="btn btn-info" (click)="goToTMC()">
                             Revisar valores diarios
                         </button>
@@ -73,39 +77,39 @@
                 </div>
             </div>
         </div>
-     
-        </div>
 
-        <h1 class="mb-4">{{titulo}} anuales</h1>
-        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-around">
-            <div class="col mb-4">
-                <div class="card">
-                    <div class="card-header bg-success"></div>
-                    <div class="card-body">
-                        <h2 class="card-title">{{tituloCardIPC}} </h2>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-around mt-md-4 mb-md-2">
-                            <button type="button" class="btn btn-success" (click)="goToIPC()">
-                                Revisar valores mensuales
-                            </button>
-                        </div>
+    </div>
+
+    <h1 class="mb-4">{{titulo}} anuales</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-around">
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-header bg-success"></div>
+                <div class="card-body">
+                    <h2 class="card-title">{{tituloCardIPC}} </h2>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-around mt-md-4 mb-md-2">
+                        <button type="button" class="btn btn-success" (click)="goToIPC()">
+                            Revisar valores mensuales
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <div class="card-header bg-warning"></div>
-                    <div class="card-body">
-                        <h2 class="card-title">{{tituloCardUTM}} </h2>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-around mt-md-4 mb-md-2">
-                            <button type="button" class="btn btn-warning" (click)="goToUTM()">
-                                Revisar valores diarios
-                            </button>
-                        </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <div class="card-header bg-warning"></div>
+                <div class="card-body">
+                    <h2 class="card-title">{{tituloCardUTM}} </h2>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-around mt-md-4 mb-md-2">
+                        <button type="button" class="btn btn-warning" (click)="goToUTM()">
+                            Revisar valores diarios
+                        </button>
                     </div>
                 </div>
+            </div>
         </div>
     </div>

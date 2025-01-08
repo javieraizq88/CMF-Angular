@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
-import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf-mes/uf-mes.component';
 import { IpcComponent } from './components/ipc/ipc.component';
 import { UtmComponent } from './components/utm/utm.component';
@@ -12,6 +11,8 @@ import { DolarMesComponent } from './components/dolar/dolar-mes/dolar-mes.compon
 import { DolarHoyComponent } from './components/dolar/dolar-hoy/dolar-hoy.component';
 import { EuroHoyComponent } from './components/euro/euro-hoy/euro-hoy.component';
 import { EuroMesComponent } from './components/euro/euro-mes/euro-mes.component';
+import { TmcMesComponent } from './components/tmc/tmc-mes/tmc-mes.component';
+import { TmcHoyComponent } from './components/tmc/tmc-hoy/tmc-hoy.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'euro', component: EuroMesComponent },
   { path: 'euro-hoy', component: EuroHoyComponent },
   { path: 'tmc', component: TmcMesComponent },
+  { path: 'tmc-hoy', component: TmcHoyComponent },
   { path: 'uf', component: UfMesComponent },
   { path: 'ipc', component: IpcComponent },
   { path: 'utm', component: UtmComponent },
