@@ -3,12 +3,40 @@
 button{
     text-transform: uppercase;
     font-size: 0.8rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
 }
-.btn-outline-primary{
-    background-color: blueviolet;
+.btn-outline-primary {
     color: white;
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+.btn-outline-primary:hover {
+    color: white;
+    background-color: rgb(105, 39, 168);
 }
 .btn-outline-secondary{
     color: white;
-    background-color:rgb(255, 28, 244)
+    background-color:rgb(255, 111, 28);
+    border-color: rgb(255, 111, 28);
 }
+
+.btn-outline-secondary:hover{
+    color: white;
+    background-color:rgb(165, 79, 30)
+}
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {    
+
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

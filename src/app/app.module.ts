@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { EuroMesComponent } from './components/euro-mes/euro-mes.component';
 import { TmcMesComponent } from './components/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf-mes/uf-mes.component';
 import { IpcComponent } from './components/ipc/ipc.component';
@@ -21,13 +20,13 @@ import { TablaComponent } from './components/tabla/tabla.component';
 import { CmfApiService } from './services/cmf-api.service';
 import { DolarMesComponent } from './components/dolar/dolar-mes/dolar-mes.component';
 import { DolarHoyComponent } from './components/dolar/dolar-hoy/dolar-hoy.component';
+import { EuroMesComponent } from './components/euro/euro-mes/euro-mes.component';
+import { EuroHoyComponent } from './components/euro/euro-hoy/euro-hoy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-
-    EuroMesComponent,
     TmcMesComponent,
     UfMesComponent,
     IpcComponent,
@@ -37,6 +36,8 @@ import { DolarHoyComponent } from './components/dolar/dolar-hoy/dolar-hoy.compon
     OrderPipe,
          DolarMesComponent,
          DolarHoyComponent,
+         EuroHoyComponent,
+         EuroMesComponent,
 
   ],
   imports: [

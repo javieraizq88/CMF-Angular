@@ -1,5 +1,8 @@
-.table-responsive{
-    margin: 2rem 6rem !important;
+.mat-mdc-table{
+    margin: 2rem !important;
+}
+.mdc-data-table__table{
+    min-width: 50rem;
 }
 .mat-mdc-row {
     height: 2rem;
@@ -7,7 +10,9 @@
 .mat-mdc-header-row{
     height: 3rem;
     font-size: 1.2rem;
+    text-align: center;
 }
 .mat-mdc-header-cell{
     border: 1px solid white;
+    text-align: center;
 }

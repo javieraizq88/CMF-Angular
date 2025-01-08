@@ -35,8 +35,14 @@ export class HomeComponent implements OnInit{
   goToEuro(){
     this.router.navigate(['/euro']);
   }
+  goToEuroHoy(){
+    this.router.navigate(['/euro-hoy']);
+  }
   goToTMC(){
     this.router.navigate(['/tmc']);
+  }
+  goToTMCHoy(){
+    this.router.navigate(['/tmc-hoy']);
   }
   goToUf(){
     this.router.navigate(['/uf']);
