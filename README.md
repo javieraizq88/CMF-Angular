@@ -4,9 +4,9 @@
 
 1) Angular CLI v16
 2) node v20.17.0
-3) npm v10.8.2
+3) npm v11.0.0
 4) Bootstrap v5.1
-
+5) charts 
 ## para la API key
 
 1) solicitar API key en https://api.cmfchile.cl/index.html

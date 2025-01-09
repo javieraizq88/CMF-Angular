@@ -1,14 +1,28 @@
 <div class="container mt-4">
     <div class="d-flex">
-        <button type="button" class="btn btn-dark" (click)="goToHome()">
-            <i class="fa-solid fa-arrow-left mr-2"></i>
-            Volver
-        </button>
+      <button type="button" class="btn btn-dark" (click)="goToHome()">
+        <i class="fa-solid fa-arrow-left mr-2"></i>
+        Volver
+      </button>
     </div>
 
-    <h1 class="mt-4">Valor actual del {{tituloCard}}: $ {{value}}</h1>
-
-    <h2>Nombre divisa: {{tituloCard}} </h2>
-    <h2>Fecha: {{currentDate}} </h2>
-    <h2>Unidad de medida: Pesos CLP</h2>
-</div>
+    <div class="row d-flex justify-content-center">
+      <div class="col col-md-10">
+        <div class="card">
+            <div class="card-header">
+              <h1 class="mt-2">{{ tituloCard }}: ${{value}}</h1>
+            </div>
+            <div class="card-body">
+              <div *ngIf="value !== 'Cargando...'" class="d-flex justify-content-around">
+                <h2>Valor actual: ${{value}}</h2>
+                <h2>Nombre divisa: {{tituloCard}} </h2>
+                <h2>Fecha: {{currentDate}} </h2>
+                <h2>Unidad de medida: Pesos CLP</h2>
+              </div>
+              <canvas id="dolarChart"></canvas>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

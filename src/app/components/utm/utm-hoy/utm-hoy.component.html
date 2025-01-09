@@ -1,14 +1,28 @@
 <div class="container mt-4">
   <div class="d-flex">
-      <button type="button" class="btn btn-dark" (click)="goToHome()">
-          <i class="fa-solid fa-arrow-left mr-2"></i>
-          Volver
-      </button>
+    <button type="button" class="btn btn-dark" (click)="goToHome()">
+      <i class="fa-solid fa-arrow-left mr-2"></i>
+      Volver
+    </button>
   </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h1 class="mt-4">Valor actual de la {{tituloCard}}: $ {{value}}</h1>
 
-  <h1 class="mt-4">Valor actual del {{tituloCard}}: $ {{value}}</h1>
+      <h2>Nombre divisa: {{tituloCard}} </h2>
+      <h2>Fecha: {{currentDate}} </h2>
+      <h2>Unidad de medida: Pesos CLP</h2>
+    </div>
+    <div class="col">
+      <!-- Muestra el gráfico -->
+      <div style="height: 400px;">
+        <canvas id="utmChart"></canvas> <!-- Se utiliza el id del canvas -->
+      </div>
 
-  <h2>Nombre divisa: {{tituloCard}} </h2>
-  <h2>Fecha: {{currentDate}} </h2>
-  <h2>Unidad de medida: Pesos CLP</h2>
+      <div class="card-body">
+        <p>Valor Actual de la UTM: ${{ value }}</p>
+        <p>Fecha Actual: {{ currentDate }}</p>
+      </div>
+    </div>
+  </div>
 </div>
