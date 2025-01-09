@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <div class="d-flex">
+        <button type="button" class="btn btn-dark" (click)="goToHome()">
+            <i class="fa-solid fa-arrow-left mr-2"></i>
+            Volver
+        </button>
+        <h1 class="ms-4 mt-2">Valor del {{tituloCard}} de los úlimos 30 días</h1>
+    </div>
+
+    <div class="d-flex justify-content-center px-5 pt-0">
+        <table mat-table [dataSource]="sortedData">
+            <!-- Columna Fecha -->
+            <ng-container matColumnDef="fecha">
+                <th mat-header-cell *matHeaderCellDef>Fecha</th>
+                <td class="py-0 text-center" mat-cell *matCellDef="let element">{{ element.Fecha }}</td>
+            </ng-container>
+
+            <!-- Columna Valor -->
+            <ng-container matColumnDef="valor">
+                <th mat-header-cell *matHeaderCellDef (click)="sortByValue()">Valor en Pesos Chilenos</th>
+                <td class="py-0 text-center" mat-cell *matCellDef="let element">$ {{ element.Valor }}</td>
+            </ng-container>
+
+            <!-- Fila de encabezados -->
+            <tr class="bg-warning text-white py-4 h-5" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+            <!-- Fila de datos -->
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+
+    <ng-template #noData>
+        <p>No se encontraron datos.</p>
+    </ng-template>
+
+</div>

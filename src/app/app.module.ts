@@ -1,15 +1,11 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { TmcMesComponent } from './components/tmc/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf/uf-mes/uf-mes.component';
-import { UtmComponent } from './components/utm/utm.component'; 
 import { HomeComponent } from './components/home/pages/home.component';
 import { OrderPipe } from './pipes/order.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,14 +21,14 @@ import { IpcAnualComponent } from './components/ipc/ipc-anual/ipc-anual.componen
 import { IpcHoyComponent } from './components/ipc/ipc-hoy/ipc-hoy.component';
 import { TmcHoyComponent } from './components/tmc/tmc-hoy/tmc-hoy.component';
 import { UfHoyComponent } from './components/uf/uf-hoy/uf-hoy.component';
+import { UtmHoyComponent } from './components/utm/utm-hoy/utm-hoy.component';
+import { UtmAnualComponent } from './components/utm/utm-anual/utm-anual.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    UtmComponent,
     TablaComponent,
-    
     OrderPipe,
     DolarMesComponent,
     DolarHoyComponent,
@@ -43,7 +39,9 @@ import { UfHoyComponent } from './components/uf/uf-hoy/uf-hoy.component';
     TmcMesComponent,
     TmcHoyComponent,
     UfMesComponent,
-    UfHoyComponent
+    UfHoyComponent,
+    UtmHoyComponent,
+    UtmAnualComponent
 
   ],
   imports: [

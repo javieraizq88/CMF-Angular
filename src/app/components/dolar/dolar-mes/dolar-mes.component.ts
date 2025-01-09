@@ -20,9 +20,9 @@ export class DolarMesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getEuroMes().subscribe((data: any) => {
+    this.apiService.getDolarMes().subscribe((data: any) => {
         // console.log('Datos del euro:', data );
-        this.dolarData = data.Euros;
+        this.dolarData = data.Dolaress;
         this.sortedData = [...this.dolarData];
     });
   }

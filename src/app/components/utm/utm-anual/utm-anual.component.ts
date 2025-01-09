@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { CmfApiService } from 'src/app/services/cmf-api.service';
 
 @Component({
-  selector: 'app-euro-mes',
-  templateUrl: './euro-mes.component.html',
-  styleUrls: ['./euro-mes.component.css']
+  selector: 'app-utm-anual',
+  templateUrl: './utm-anual.component.html',
+  styleUrls: ['./utm-anual.component.css']
 })
-export class EuroMesComponent  implements OnInit {
-  @Input() tituloCard: string = "Euro"
-  euroData: any[] = [];  // Array para almacenar todos los datos del euro
+export class UtmAnualComponent implements OnInit {
+  @Input() tituloCard: string = "Unidad Tributaria Mensual (UTM)"
+  utmData: any[] = [];  // Array para almacenar todos los datos del euro
   displayedColumns: string[] = ['fecha', 'valor'];   // columnas para la tabla
   sortedData: any[] = [];
   sortAsc: boolean = true;
@@ -20,12 +20,13 @@ export class EuroMesComponent  implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getEuroMes().subscribe((data: any) => {
-        // console.log('Datos del euro:', data.Euros );
-        this.euroData = data.Euros;
-        this.sortedData = [...this.euroData];
+    this.apiService.getUTM().subscribe((data: any) => {
+        // console.log('Datos del euro:', data );
+        this.utmData = data.UTMs;
+        this.sortedData = [...this.utmData];
     });
   }
+
   goToHome() {
     this.router.navigate(['/']);
   }

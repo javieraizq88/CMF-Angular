@@ -9,7 +9,7 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class IpcAnualComponent implements OnInit {
   @Input() tituloCard: string = "IPC"
-  dolarData: any[] = [];  // Array para almacenar todos los datos del euro
+  ipcData: any[] = [];  // Array para almacenar todos los datos del euro
   displayedColumns: string[] = ['fecha', 'valor'];   // columnas para la tabla
   sortedData: any[] = [];
   sortAsc: boolean = true;
@@ -20,10 +20,10 @@ export class IpcAnualComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getEuroMes().subscribe((data: any) => {
+    this.apiService.getIPC().subscribe((data: any) => {
         // console.log('Datos del euro:', data );
-        this.dolarData = data.Euros;
-        this.sortedData = [...this.dolarData];
+        this.ipcData = data.IPCs;
+        this.sortedData = [...this.ipcData];
     });
   }
 
