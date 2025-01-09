@@ -110,7 +110,7 @@ private dayMnus12Month = this.getDayMinus12Months();
     return this.http.get<any>(url);  
   }
   getEuroActual(): Observable<any> {
-    const url = `${this.apiUrl}/dolar?apikey=${this.APIKey}&formato=json`;
+    const url = `${this.apiUrl}/euro?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
   getUfActual(): Observable<any> {
