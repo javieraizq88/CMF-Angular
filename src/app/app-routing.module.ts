@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'ipc', component: IpcAnualComponent },
   { path: 'ipc-hoy', component: IpcHoyComponent },
   { path: 'utm', component: UtmAnualComponent },
-  { path: 'utm', component: UtmHoyComponent },
+  { path: 'utm-hoy', component: UtmHoyComponent },
   { path: 'tabla', component: TablaComponent },
   // TODO cuando no existe la ruta
   { path: '**', redirectTo: '/' }

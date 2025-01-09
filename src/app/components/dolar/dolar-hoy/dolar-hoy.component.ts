@@ -9,8 +9,8 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
 })
 export class DolarHoyComponent implements OnInit {
   @Input() tituloCard: string = "Dolar"
-  dolarData: any[] = [];  // Array para almacenar todos los datos del euro
-  dolarValue: string = 'Cargando...'; // Valor por defecto
+  dolarData: any[] = [];  // Array para almacenar todos los datos del dolar
+  value: string = 'Cargando...'; // Valor por defecto
   currentDate: string = "";
 
   constructor (
@@ -25,27 +25,27 @@ export class DolarHoyComponent implements OnInit {
     this.apiService.getDolarActual().subscribe(
       (data: any) => {
        // console.log('Datos del dolar:', data.Dolares );
-        this.dolarValue = data['Dolares'][0]['Valor'];
+        this.value = data['Dolares'][0]['Valor'];
       },
       // En caso de error
       (error) => {
         console.error('Error al obtener el valor del dólar', error);
-        this.dolarValue = 'Error al obtener el valor';
+        this.value = 'Error al obtener el valor';
       }
     );
 
     this.currentDate = this.getCurrentDateFormatted();
   }
   
-    // Función para obtener la fecha en formato YYYY/MM/DD
-    getCurrentDateFormatted(): string {
-      const currentDate = new Date();
+  // Función para obtener la fecha en formato YYYY/MM/DD
+  getCurrentDateFormatted(): string {
+    const currentDate = new Date();
+        
+    const year = currentDate.getFullYear(); // Obtener el año
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Obtener el mes (añadir 1 porque getMonth() empieza desde 0) y añadir un 0 si es necesario
+    const day = currentDate.getDate().toString().padStart(2, '0'); // Obtener el día y añadir un 0 si es necesario
       
-      const year = currentDate.getFullYear(); // Obtener el año
-      const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Obtener el mes (añadir 1 porque getMonth() empieza desde 0) y añadir un 0 si es necesario
-      const day = currentDate.getDate().toString().padStart(2, '0'); // Obtener el día y añadir un 0 si es necesario
-      
-      return `${year}-${month}-${day}`; // Formatear la fecha
-    }
+    return `${year}-${month}-${day}`; // Formatear la fecha
+  }
 
 }

@@ -1,10 +1,14 @@
 <div class="container mt-4">
     <div class="d-flex">
         <button type="button" class="btn btn-dark" (click)="goToHome()">
-          <i class="fa-solid fa-arrow-left mr-2"></i>
-          Volver
+            <i class="fa-solid fa-arrow-left mr-2"></i>
+            Volver
         </button>
-        <h1 class="ms-4 mt-2">Valor del {{tituloCard}} de los úlimos 30 días</h1>
-      </div>
+    </div>
+
+    <h1 class="mt-4">Valor actual del {{tituloCard}}:  {{ipcValue}}</h1>
+
+    <h2>Nombre Indicador: {{tituloCard}} </h2>
+    <h2>Fecha: {{currentDate}} </h2>
     
 </div>
