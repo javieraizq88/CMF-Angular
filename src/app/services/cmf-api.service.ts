@@ -84,17 +84,16 @@ private dayMnus12Month = this.getDayMinus12Months();
     const url = `${this.apiUrl}/euro/posteriores/${this.yearMonthMinus30Days}/dias/${this.dayMnus30Days}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
-
   getUf30Days(): Observable<any> {
     const url = `${this.apiUrl}/uf/posteriores/${this.yearMonthMinus30Days}/dias/${this.dayMnus30Days}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
   getIPC12Months(): Observable<any> {
-    const url = `${this.apiUrl}/ipc/posteriores/${this.yearMonthMinus12Month}/dias/${this.dayMnus12Month}?apikey=${this.APIKey}&formato=json`;
+    const url = `${this.apiUrl}/ipc/posteriores/${this.yearMonthMinus12Month}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
   getUtm12Months(): Observable<any> {
-    const url = `${this.apiUrl}/utm/posteriores/${this.yearMonthMinus12Month}/dias/${this.dayMnus12Month}?apikey=${this.APIKey}&formato=json`;
+    const url = `${this.apiUrl}/utm/posteriores/${this.yearMonthMinus12Month}?apikey=${this.APIKey}&formato=json`;
     return this.http.get<any>(url);  
   }
 
