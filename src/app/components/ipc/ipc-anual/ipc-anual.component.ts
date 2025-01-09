@@ -20,7 +20,7 @@ export class IpcAnualComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getIPC().subscribe((data: any) => {
+    this.apiService.getIPC12Months().subscribe((data: any) => {
         // console.log('Datos del euro:', data );
         this.ipcData = data.IPCs;
         this.sortedData = [...this.ipcData];

@@ -20,7 +20,7 @@ export class UfMesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getUFMes().subscribe((data: any) => {
+    this.apiService.getUf30Days().subscribe((data: any) => {
         // console.log('Datos del euro:', data );
         this.ufData = data.UFs;
         this.sortedData = [...this.ufData];

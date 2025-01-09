@@ -8,9 +8,9 @@ import { CmfApiService } from 'src/app/services/cmf-api.service';
   styleUrls: ['./dolar-mes.component.css']
 })
 export class DolarMesComponent implements OnInit {
-  @Input() tituloCard: string = "Dolar"
-  dolarData: any[] = [];  // Array para almacenar todos los datos del euro
-  displayedColumns: string[] = ['fecha', 'valor'];   // columnas para la tabla
+  @Input() tituloCard: string = "Dolar";
+  dolarData: any[] = [];  // Array para almacenar todos los datos del dólar
+  displayedColumns: string[] = ['fecha', 'valor'];  // Columnas para la tabla
   sortedData: any[] = [];
   sortAsc: boolean = true;
 
@@ -20,9 +20,9 @@ export class DolarMesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getDolarMes().subscribe((data: any) => {
-        // console.log('Datos del euro:', data );
-        this.dolarData = data.Dolaress;
+    this.apiService.getDolar30Days().subscribe((data: any) => {
+       // console.log('Datos del dolar:', data );
+        this.dolarData = data.Dolares;
         this.sortedData = [...this.dolarData];
     });
   }
@@ -41,5 +41,6 @@ export class DolarMesComponent implements OnInit {
       }
     });
   }
+
 
 }

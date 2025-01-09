@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TmcMesComponent } from './components/tmc/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf/uf-mes/uf-mes.component';
 import { HomeComponent } from './components/home/pages/home.component';
 import { OrderPipe } from './pipes/order.pipe';
@@ -19,7 +18,6 @@ import { EuroMesComponent } from './components/euro/euro-mes/euro-mes.component'
 import { EuroHoyComponent } from './components/euro/euro-hoy/euro-hoy.component';
 import { IpcAnualComponent } from './components/ipc/ipc-anual/ipc-anual.component';
 import { IpcHoyComponent } from './components/ipc/ipc-hoy/ipc-hoy.component';
-import { TmcHoyComponent } from './components/tmc/tmc-hoy/tmc-hoy.component';
 import { UfHoyComponent } from './components/uf/uf-hoy/uf-hoy.component';
 import { UtmHoyComponent } from './components/utm/utm-hoy/utm-hoy.component';
 import { UtmAnualComponent } from './components/utm/utm-anual/utm-anual.component';
@@ -36,8 +34,6 @@ import { UtmAnualComponent } from './components/utm/utm-anual/utm-anual.componen
     EuroMesComponent,
     IpcAnualComponent,
     IpcHoyComponent,
-    TmcMesComponent,
-    TmcHoyComponent,
     UfMesComponent,
     UfHoyComponent,
     UtmHoyComponent,

@@ -20,7 +20,7 @@ export class EuroMesComponent  implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getEuroMes().subscribe((data: any) => {
+    this.apiService.getEuro30Days().subscribe((data: any) => {
         // console.log('Datos del euro:', data.Euros );
         this.euroData = data.Euros;
         this.sortedData = [...this.euroData];

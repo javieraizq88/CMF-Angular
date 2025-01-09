@@ -16,7 +16,7 @@ export class TablaComponent implements OnInit {
   constructor(private service: CmfApiService) {}
 
   ngOnInit(): void {
-    this.service.getDolarMes().subscribe((data: any) => {
+    this.service.getDolar30Days().subscribe((data: any) => {
       console.log(data.Dolares)
       this.dolarData = data.Dolares;
       this.sortedData = [...this.dolarData];

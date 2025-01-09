@@ -20,7 +20,7 @@ export class UtmAnualComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.apiService.getUTM().subscribe((data: any) => {
+    this.apiService.getUtm12Months().subscribe((data: any) => {
         // console.log('Datos del euro:', data );
         this.utmData = data.UTMs;
         this.sortedData = [...this.utmData];

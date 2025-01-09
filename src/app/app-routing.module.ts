@@ -7,8 +7,6 @@ import { DolarMesComponent } from './components/dolar/dolar-mes/dolar-mes.compon
 import { DolarHoyComponent } from './components/dolar/dolar-hoy/dolar-hoy.component';
 import { EuroHoyComponent } from './components/euro/euro-hoy/euro-hoy.component';
 import { EuroMesComponent } from './components/euro/euro-mes/euro-mes.component';
-import { TmcMesComponent } from './components/tmc/tmc-mes/tmc-mes.component';
-import { TmcHoyComponent } from './components/tmc/tmc-hoy/tmc-hoy.component';
 import { UfHoyComponent } from './components/uf/uf-hoy/uf-hoy.component';
 import { IpcAnualComponent } from './components/ipc/ipc-anual/ipc-anual.component';
 import { IpcHoyComponent } from './components/ipc/ipc-hoy/ipc-hoy.component';
@@ -22,8 +20,6 @@ const routes: Routes = [
   { path: 'dolar-hoy', component: DolarHoyComponent },
   { path: 'euro', component: EuroMesComponent },
   { path: 'euro-hoy', component: EuroHoyComponent },
-  { path: 'tmc', component: TmcMesComponent },
-  { path: 'tmc-hoy', component: TmcHoyComponent },
   { path: 'uf', component: UfMesComponent },
   { path: 'uf-hoy', component: UfHoyComponent },
   { path: 'ipc', component: IpcAnualComponent },

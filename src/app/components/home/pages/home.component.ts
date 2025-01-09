@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit{
   @Input() titulo: string = "Indicadores"
   @Input() tituloCardDolar: string = "Dolar (USD o $)" 
   @Input() tituloCardEuro: string = "Euro (EUR o €)"
-  @Input() tituloCardTMC: string = "Tasa de Interés Máxima Convencional (TMC)"
+
   @Input() tituloCardUTM: string = "Unidad Tributaria Mensual (UTM)"
   @Input() tituloCardUF: string = "Unidad de Fomento (UF)"
   @Input() tituloCardIPC: string = "Indice de Precios al Consumidor (IPC)"
@@ -31,8 +31,6 @@ export class HomeComponent implements OnInit{
   goToDolarHoy() {this.router.navigate(['/dolar-hoy'])}
   goToEuro() {this.router.navigate(['/euro'])}
   goToEuroHoy() {this.router.navigate(['/euro-hoy'])}
-  goToTMC(){this.router.navigate(['/tmc'])}
-  goToTMCHoy(){this.router.navigate(['/tmc-hoy'])}
   goToUf() {this.router.navigate(['/uf'])}
   goToUfHoy() {this.router.navigate(['/uf-hoy'])}
   goToIPC(){this.router.navigate(['/ipc']);}
