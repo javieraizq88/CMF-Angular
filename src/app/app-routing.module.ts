@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { UfMesComponent } from './components/uf/uf-mes/uf-mes.component';
-import { IpcComponent } from './components/ipc/ipc.component';
+
 import { UtmComponent } from './components/utm/utm.component';
 import { HomeComponent } from './components/home/pages/home.component';
 import { TablaComponent } from './components/tabla/tabla.component';
@@ -14,6 +14,8 @@ import { EuroMesComponent } from './components/euro/euro-mes/euro-mes.component'
 import { TmcMesComponent } from './components/tmc/tmc-mes/tmc-mes.component';
 import { TmcHoyComponent } from './components/tmc/tmc-hoy/tmc-hoy.component';
 import { UfHoyComponent } from './components/uf/uf-hoy/uf-hoy.component';
+import { IpcAnualComponent } from './components/ipc/ipc-anual/ipc-anual.component';
+import { IpcHoyComponent } from './components/ipc/ipc-hoy/ipc-hoy.component';
 
 
 const routes: Routes = [
@@ -26,7 +28,8 @@ const routes: Routes = [
   { path: 'tmc-hoy', component: TmcHoyComponent },
   { path: 'uf', component: UfMesComponent },
   { path: 'uf-hoy', component: UfHoyComponent },
-  { path: 'ipc', component: IpcComponent },
+  { path: 'ipc', component: IpcAnualComponent },
+  { path: 'ipc-hoy', component: IpcHoyComponent },
   { path: 'utm', component: UtmComponent },
   { path: 'tabla', component: TablaComponent },
   // TODO cuando no existe la ruta

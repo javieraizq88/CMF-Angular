@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  @Input() titulo: string = "Indcadores"
+  @Input() titulo: string = "Indicadores"
   @Input() tituloCardDolar: string = "Dolar (USD o $)" 
   @Input() tituloCardEuro: string = "Euro (EUR o €)"
   @Input() tituloCardTMC: string = "Tasa de Interés Máxima Convencional (TMC)"
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit{
   @Input() tituloCardUF: string = "Unidad de Fomento (UF)"
   @Input() tituloCardIPC: string = "Indice de Precios al Consumidor (IPC)"
   @Input() textoBotonMes: string = "últimos 30 días"
-  @Input() textoBotonYear: string = "año actual"
+  @Input() textoBotonYear: string = "últimos 12 meses"
   
   @Input() textoDescripcion: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate quas repellendus voluptas"
 
@@ -35,14 +35,9 @@ export class HomeComponent implements OnInit{
   goToTMCHoy(){this.router.navigate(['/tmc-hoy'])}
   goToUf() {this.router.navigate(['/uf'])}
   goToUfHoy() {this.router.navigate(['/uf-hoy'])}
-  goToIPC(){
-    this.router.navigate(['/ipc']);
-  }
-  goToIPCHoy(){
-    this.router.navigate(['/ipc-hoy']);
-  }
-  goToUTM(){
-    this.router.navigate(['/utm']);
-  }
+  goToIPC(){this.router.navigate(['/ipc']);}
+  goToIPCHoy(){this.router.navigate(['/ipc-hoy']);}
+  goToUTM(){this.router.navigate(['/utm']);}
+  goToUTMHoy(){this.router.navigate(['/utm-hoy']);}
 
 }

@@ -9,6 +9,8 @@
 button{
     text-transform: uppercase;
     font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing:1px;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
 }
@@ -26,10 +28,19 @@ button{
     background-color:rgb(255, 111, 28);
     border-color: rgb(255, 111, 28);
 }
-
 .btn-outline-secondary:hover{
     color: white;
     background-color:rgb(165, 79, 30)
+}
+.btn-outline-terciary{
+    color: black;
+    background-color:rgb(28, 255, 119);
+    border-color: rgb(28, 255, 119);
+}
+.btn-outline-terciary:hover{
+    color: white;
+    background-color:rgb(34, 130, 72);
+    border-color: rgb(28, 255, 119);
 }
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 

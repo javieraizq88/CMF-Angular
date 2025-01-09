@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { TmcMesComponent } from './components/tmc/tmc-mes/tmc-mes.component';
 import { UfMesComponent } from './components/uf/uf-mes/uf-mes.component';
-import { IpcComponent } from './components/ipc/ipc.component';
 import { UtmComponent } from './components/utm/utm.component'; 
 import { HomeComponent } from './components/home/pages/home.component';
 import { OrderPipe } from './pipes/order.pipe';
@@ -31,8 +30,6 @@ import { UfHoyComponent } from './components/uf/uf-hoy/uf-hoy.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    UfMesComponent,
-    IpcComponent,
     UtmComponent,
     TablaComponent,
     
@@ -43,9 +40,9 @@ import { UfHoyComponent } from './components/uf/uf-hoy/uf-hoy.component';
     EuroMesComponent,
     IpcAnualComponent,
     IpcHoyComponent,
-    TmcHoyComponent,
     TmcMesComponent,
     TmcHoyComponent,
+    UfMesComponent,
     UfHoyComponent
 
   ],
