@@ -11,7 +11,6 @@ export class DolarMesComponent implements OnInit {
   @Input() tituloCard: string = "Dolar";
   dolarData: any[] = [];  // Array para almacenar todos los datos del dólar
   displayedColumns: string[] = ['fecha', 'valor'];  // Columnas para la tabla
-  sortedData: any[] = [];
   sortAsc: boolean = true;
 
   constructor (
@@ -23,7 +22,6 @@ export class DolarMesComponent implements OnInit {
     this.apiService.getDolar30Days().subscribe((data: any) => {
        // console.log('Datos del dolar:', data );
         this.dolarData = data.Dolares;
-        this.sortedData = [...this.dolarData];
     });
   }
 
@@ -31,16 +29,6 @@ export class DolarMesComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  sortByValue(): void {
-    this.sortAsc = !this.sortAsc;
-    this.sortedData.sort((a: any, b: any) => {
-      if (this.sortAsc) {
-        return a.valor - b.valor;
-      } else {
-        return b.valor - a.valor;
-      }
-    });
-  }
 
 
 }
